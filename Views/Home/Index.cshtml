@@ -2,7 +2,67 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Padrão MVC</h1>
+    </div>
+    <div>
+        <h3> <font size="4"> Model: </font> </h3>
+        <p> Representa os dados a serem tratados e não inclui detalhes de implmentação. </p
+
+        <h3> <font size="4"> View: </font> </h3>
+        <p> Representa os compomentes de interface com o usuario (UI) e está vinculado ao Model. </p
+
+        <h3> <font size="4"> Controller: </font> </h3>
+        <p> Forma um mecanismo para o usuario interagir com o sistema, definindo como a interface do usuario vai
+            reagir a ação do usuario. É responsavel por trocar e interpretar mensagens entre View e Model.     
+        </p
+    </div>
+    <div>
+        <h2> Padrões de comunicação</h2>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Permitidos</th>
+      <th scope="col">Não Permitidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Os usuarios podem interagir com uma view</td>
+      <td>Os usuarios não podem interagir diretamente com a Model</td>
+    </tr>
+    <tr>
+
+      <td>Views podem interagir com Controller</td>
+      <td>Views não podem interagir diretamente com outras Views</td>
+
+    </tr>
+    <tr>
+      <td >Controller podem interagir com View</td>
+      <td>Views não podem interagir diretamente com model</td>
+    </tr>
+     <tr>
+      <td >Controller podem comunicar com outros controller</td>
+      <td>Models não interagi com outras Models</td>
+    </tr>
+     <tr>
+      <td >Controller podem comunicar com a Model</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <div>
+        <h2> Beneficios</h2>
+        <p>
+            A view e o model são desacoplados ou dissociados.
+            <br>
+            A dissocialção View-Controller permite que você altere a forma, como uma aplicação responde a entrada do usuario sem alterar o modo de exbição,
+            permitindo que a interface do usuario (a View) seja alterada sem alterar a maneira como a aplicação responde a entrada do usuario.
+        </p>
+    </div>
+    <img src="https://arquivo.devmedia.com.br/artigos/Higor_Medeiros/IntroducaoMVC/IntroducaoMVC02.jpg" />
+</body>
+
